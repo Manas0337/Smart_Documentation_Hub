@@ -6,20 +6,15 @@ namespace Backend.Models
     {
         [Key]
         public int VersionId { get; set; }
-
+        public int DocId { get; set; }
         public int VersionNumber { get; set; }
-        public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
-
-        [Required]
         public string FilePath { get; set; }
 
-        public int DocId { get; set; }
-        public Document Document { get; set; }
+        // CRITICAL for this step
+        public string OriginalText { get; set; }
 
+        public DateTime UploadedAt { get; set; }
         public int CreatedById { get; set; }
-        public User CreatedBy { get; set; }
-
-        public ICollection<InlineComment> InlineComments { get; set; }
     }
 
 }

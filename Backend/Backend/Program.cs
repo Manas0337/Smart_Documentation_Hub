@@ -44,6 +44,9 @@ namespace Backend
                 });
             builder.Services.AddScoped<DocumentService>();
 
+            builder.Services.AddScoped<DocumentTextExtractionService>();
+            builder.Services.AddScoped<DocumentVersionService>();
+
             var app = builder.Build();
 
             // Middleware
