@@ -17,14 +17,12 @@ function ProtectedRoute({ children }) {
 }
 
 function App() {
-  const token = localStorage.getItem("token");
-
   return (
     <BrowserRouter>
       <Routes>
 
         {/* 🌐 PUBLIC ROUTES */}
-        <Route path="/" element={token ? <Navigate to="/dashboard" /> : <Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
