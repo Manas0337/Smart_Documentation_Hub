@@ -1,0 +1,204 @@
+/* ===============================
+   GLOBAL UI REFINEMENT
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: #eef2f7;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.edit-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #eef2f7;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.edit-header {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 18px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-header h2 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.edit-header small {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ===============================
+   BODY
+================================ */
+.edit-body {
+  flex: 1;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+/* ===============================
+   TWO COLUMN LAYOUT
+================================ */
+.editor-layout {
+  display: flex;
+  gap: 28px;
+  padding: 28px;
+  height: 100%;
+}
+
+/* ===============================
+   EDITOR
+================================ */
+.editor-panel {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.editor-panel textarea {
+  width: 100%;
+  max-width: 900px;
+  min-height: calc(100vh - 270px);
+
+  padding: 42px 48px;
+  background: #ffffff;
+
+  border-radius: 18px;
+  border: 1px solid #e2e8ff;
+
+  font-size: 16px;
+  line-height: 1.8;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #111827;
+
+  resize: none;
+  outline: none;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   COMMENTS PANEL
+================================ */
+.comments-panel {
+  flex: 1;
+  max-width: 320px;
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  height: fit-content;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.comments-panel h4 {
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.comment-box {
+  background: #f4f7ff;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===============================
+   TEXT INPUTS
+================================ */
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.edit-footer {
+  background: white;
+  padding: 16px 30px;
+  border-top: 1px solid #e6ecff;
+  display: flex;
+}
+
+.centered-footer {
+  justify-content: center;
+  gap: 18px;
+}
+
+/* ===============================
+   BUTTONS (POLISHED)
+================================ */
+button {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  transition: all 0.25s ease;
+}
+
+/* Primary */
+.save-btn,
+.add-comment-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 11px 26px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.4);
+}
+
+.save-btn:hover,
+.add-comment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.5);
+}
+
+.save-btn:disabled {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Secondary */
+.back-btn,
+.view-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1d4ed8;
+  border: 1px solid rgba(29, 78, 216, 0.4);
+  padding: 9px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover,
+.view-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+}
